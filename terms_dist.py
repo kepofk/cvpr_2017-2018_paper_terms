@@ -22,10 +22,10 @@ def getTermCountsSeries(titles,sr_name):
 			terms.append(term)
 	return pd.Series(terms, name=sr_name).value_counts()
 
-def printDfSortBy(df, sort_key, print_num):
+def printDfSortBy(df, sort_key, print_num, ascending_flag):
 	print("\n====================================================")
-	print("sort by '%s'" % sort_key)
-	print(df.sort_values(by=sort_key, ascending=False)[:print_num])
+	print("sort by '%s', ascending :%s" % (sort_key, ascending_flag))
+	print(df.sort_values(by=sort_key, ascending=ascending_flag)[:print_num])
 
 if __name__ == "__main__":
 	last_year_path = "./dump/CVPR2017.py"
@@ -36,7 +36,7 @@ if __name__ == "__main__":
 	this_year_titles = loadTitles(this_year_path)
 	
 	print("\n====================================================")
-	print("cvpr_2017_titles : %d, cvpr_2018_titles : %d" % (len(last_year_titles), len(this_year_titles)))
+	print("cvpr_2017_titles : %d\ncvpr_2018_titles : %d" % (len(last_year_titles), len(this_year_titles)))
 
 	last_year_terms_counts_sr = getTermCountsSeries(last_year_titles, "2017")
 	this_year_terms_counts_sr = getTermCountsSeries(this_year_titles, "2018")
@@ -48,9 +48,11 @@ if __name__ == "__main__":
 	df["2018_norm"] = df["2018"] / df["2018"].sum()
 	df["norm_diff"] = df["2018_norm"] - df["2017_norm"]
 
-	printDfSortBy(df, "sum", 20)
-	printDfSortBy(df, "diff", 20)
-	printDfSortBy(df, "norm_diff", 20)
+	printDfSortBy(df, "sum", 20, False)
+	printDfSortBy(df, "diff", 20, False)
+	printDfSortBy(df, "diff", 20, True)
+	printDfSortBy(df, "norm_diff", 20, False)
+	printDfSortBy(df, "norm_diff", 20, True)
 	
 	print("\noutput_path : %s" % output_path)
 	df = df.sort_values(by="diff", ascending=False)
