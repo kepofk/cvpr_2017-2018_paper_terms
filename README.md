@@ -1,6 +1,6 @@
 # cvpr_2017-2018_paper_terms
 
-Term Frequency in CVPR 2017 and 2018 Paper Titles.
+Term Frequency in [CVPR2017](http://openaccess.thecvf.com/CVPR2017.py) and [CVPR2018](http://openaccess.thecvf.com/CVPR2018.py) Paper Titles.
 
 ```
 ====================================================
@@ -8,7 +8,7 @@ cvpr_2017_titles : 783
 cvpr_2018_titles : 979
 
 ====================================================
-sort by 'sum', ascending :False
+sort by 'sum', ascending: False
             2017   2018  diff    sum  2017_norm  2018_norm  norm_diff
 for        305.0  384.0  79.0  689.0   0.047068   0.048102   0.001034
 learning   141.0  216.0  75.0  357.0   0.021759   0.027057   0.005298
@@ -32,7 +32,7 @@ visual      51.0   62.0  11.0  113.0   0.007870   0.007767  -0.000104
 using       56.0   52.0  -4.0  108.0   0.008642   0.006514  -0.002128
 
 ====================================================
-sort by 'diff', ascending :False
+sort by 'diff', ascending: False
                    2017   2018  diff    sum  2017_norm  2018_norm  norm_diff
 for               305.0  384.0  79.0  689.0   0.047068   0.048102   0.001034
 learning          141.0  216.0  75.0  357.0   0.021759   0.027057   0.005298
@@ -56,7 +56,7 @@ towards             2.0   17.0  15.0   19.0   0.000309   0.002130   0.001821
 detection          54.0   69.0  15.0  123.0   0.008333   0.008643   0.000310
 
 ====================================================
-sort by 'diff', ascending :True
+sort by 'diff', ascending: True
                 2017  2018  diff    sum  2017_norm  2018_norm  norm_diff
 classification  28.0  16.0 -12.0   44.0   0.004321   0.002004  -0.002317
 binary          13.0   1.0 -12.0   14.0   0.002006   0.000125  -0.001881
@@ -80,7 +80,7 @@ rank             7.0   2.0  -5.0    9.0   0.001080   0.000251  -0.000830
 models          20.0  15.0  -5.0   35.0   0.003086   0.001879  -0.001207
 
 ====================================================
-sort by 'norm_diff', ascending :False
+sort by 'norm_diff', ascending: False
                    2017   2018  diff    sum  2017_norm  2018_norm  norm_diff
 learning          141.0  216.0  75.0  357.0   0.021759   0.027057   0.005298
 adversarial        16.0   61.0  45.0   77.0   0.002469   0.007641   0.005172
@@ -104,7 +104,7 @@ unsupervised       17.0   30.0  13.0   47.0   0.002623   0.003758   0.001135
 pose               26.0   41.0  15.0   67.0   0.004012   0.005136   0.001124
 
 ====================================================
-sort by 'norm_diff', ascending :True
+sort by 'norm_diff', ascending: True
                  2017   2018  diff    sum  2017_norm  2018_norm  norm_diff
 deep            126.0  122.0  -4.0  248.0   0.019444   0.015282  -0.004162
 recognition      57.0   48.0  -9.0  105.0   0.008796   0.006013  -0.002784
